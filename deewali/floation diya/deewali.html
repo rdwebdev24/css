@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>happy deepawali</title>
+     <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Arvo&family=Cormorant+Garamond:wght@300&family=Fruktur&family=Kaushan+Script&family=Montserrat:wght@300&family=Ubuntu&display=swap');
+
+          * {
+               margin: 0px;
+               padding: 0px;
+               box-sizing: border-box;
+          }
+
+          .box {
+              
+               width: 100vw;
+               height: 100vh;
+               /* display: grid; */
+               /* place-items: center; */
+               /* border: 2px solid red; */
+          }
+
+          html {
+               font-size: 62.5%;
+          }
+
+          .head{
+              
+               text-transform: capitalize;
+               margin-top: 7rem;
+               font-size: 3rem;
+               text-align: center;
+               position: relative;
+               font-size: bolder;
+               color: black;
+
+               
+          }
+          span{
+               font-family: 'Montserrat', sans-serif;
+               font-weight: bolder;
+               animation: glow 1s infinite linear;
+          }
+          @keyframes glow {
+               0%{text-shadow: 2px 2px 10px yellow;}
+               25%{text-shadow: 2px 2px 6px skyblue;}
+               50%{text-shadow: 2px 2px 2px red;}
+               75%{text-shadow: 2px 2px 6px yellow;}
+               100%{text-shadow: 2px 2px 10px red;}
+          }
+          .head::before{
+              position: absolute;
+              content: "";
+              width: 11% ;
+              height: 2%;
+              top: 40px;
+              border-bottom: 2px solid red;
+          animation: slide 3s infinite linear;
+          }
+
+          @keyframes slide {
+               0%{width:15%;
+               box-shadow: 2px 2px 4px yellow;}
+               20%{width:6%;
+               box-shadow: 2px 2px 10px red;}
+               40%{width:2%;
+               box-shadow: 2px 2px 2px green;}
+               60%{width:0%;
+               box-shadow: 2px 2px 10px red;}
+               80%{width:6%;
+               box-shadow: 2px 2px 4px yellow;}
+               100%{width:15%;} 
+          }
+          .head::after{
+              position: absolute;
+              content: "";
+              width: 12% ;
+              height: 2%;
+              top: 40px;
+              transform: translateX(-100%);
+              border-bottom: 2px solid red;
+              animation: slide 3s infinite linear;
+          }
+
+          .main {
+               margin-top: 6rem;
+               margin-left: auto;
+               margin-right: auto;
+               display: grid;
+               place-items: center;
+               width: 50%;
+               height: 50%;
+               /* border: 2px solid red; */
+          }
+
+          .diya {
+               box-shadow: 0px 15px 10px -15px #111;
+               width: 25%;
+               height: 45%;
+               border-bottom: 50px solid wheat;
+              
+               border-bottom-left-radius: 50%;
+               border-bottom-right-radius: 50%;
+               position: relative;
+
+               background-image: url('./Screenshot\ \(24\).png');
+               background-repeat: no-repeat;
+               background-size: 15% 100%;
+               background-position-x: 131px;
+               animation: float-3 2s 5s infinite linear;
+          }
+
+          @keyframes float-3 {
+               0%{bottom:0px;}
+               25%{bottom:0px;}
+               50%{bottom:10px;}
+               75%{bottom:10px;}
+               100%{bottom:0px;}
+          }
+
+          .diya::before {
+               box-shadow: 0px 15px 10px -15px green;
+               content: "";
+               position: absolute;
+               width: 100%;
+               height: 100%;
+               /* bottom: 0px; */
+               border-bottom: 50px solid green;
+               border-bottom-left-radius: 50%;
+               border-bottom-right-radius: 50%;
+               z-index: -1;
+               animation: glide 5s 1s ease-in-out forwards , float-1 2s 5s infinite linear;
+               
+               background-image: url('./Screenshot\ \(24\).png');
+               background-repeat: no-repeat;
+               background-size: 15% 100%;
+               background-position-x: 131px;
+
+          }
+          @keyframes float-1 {
+               0%{left:250px;}
+               25%{bottom:-50px;}
+               50%{bottom:-30px;}
+               75%{bottom:-50px;}
+               100%{left:250px;}
+          }
+
+          @keyframes glide {
+               0% {
+                    bottom: -50px;
+               }
+
+               10% {
+                    bottom: -50px;
+               }
+
+               20% {
+                    bottom: 0px;
+               }
+
+               40% {
+                    bottom: 0px;
+               }
+
+               50% {
+                    left: 0px;
+               }
+
+               60% {
+                    left: 250px;
+               }
+
+               70% {
+                    left: 250px
+               }
+
+               80% {
+                    bottom: 0px
+               }
+
+               90% {
+                    bottom: -50px
+               }
+
+               100% {
+                    left: 250px
+               }
+          }
+
+          .diya::after {
+               box-shadow: 0px 15px 10px -15px orange;
+               content: "";
+               position: absolute;
+               width: 100%;
+               height: 100%;
+               border-bottom: 50px solid orange;
+               border-bottom-left-radius: 50%;
+               border-bottom-right-radius: 50%;
+               z-index: -2;
+               animation: glide-2 5s 1s ease-in-out forwards , float-2 2s 5s infinite linear;
+               background-image: url('./Screenshot\ \(24\).png');
+               background-repeat: no-repeat;
+               background-size: 15% 100%;
+               background-position-x: 131px;
+          }
+          @keyframes float-2 {
+               0%{right:250px;}
+               25%{bottom:-50px;}
+               50%{bottom:-30px;}
+               75%{bottom:-50px;}
+               100%{right:250px;}
+          }
+          @keyframes glide-2 {
+               0% {
+                    bottom: -50px;
+               }
+
+               10% {
+                    bottom: -50px;
+               }
+
+               20% {
+                    bottom: 0px;
+               }
+
+               40% {
+                    bottom: 0px;
+               }
+
+               50% {
+                    right: 0px;
+               }
+
+               60% {
+                    right: 250px;
+               }
+
+               70% {
+                    right: 250px
+               }
+
+               80% {
+                    bottom: 0px
+               }
+
+               90% {
+                    bottom: -50px
+               }
+
+               100% {
+                    right: 250px
+               }
+          }
+
+          img {
+               position: absolute;
+               top: 82px;
+               left: 61px;
+               width: 30%;
+               height: 60%;
+               border-radius: 50%;
+               animation: rotate 10s infinite linear
+          }
+
+     @keyframes rotate {
+          0%{transform: rotate(0deg);}
+          10%{transform: rotate(45deg);}
+          20%{transform: rotate(90deg);}
+          30%{transform: rotate(135deg);}
+          40%{transform: rotate(180deg);}
+          50%{transform: rotate(225deg);}
+          60%{transform: rotate(270deg);}
+          70%{transform: rotate(315deg);}
+          80%{transform: rotate(360deg);}
+          100%{transform: rotate(360deg);}
+     }
+     </style>
+</head>
+
+<body>
+     <div class="box">
+          <div class="head">
+          <span>happy</span>
+          <span>deepawali</span>
+          <span>doston</span>
+     </div>
+          <div class="main">
+               <div class="diya"><img src="./download.jpg" alt=""></div>
+          </div>
+     </div>
+</body>
+
+</html>

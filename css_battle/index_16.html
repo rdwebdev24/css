@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>css battle</title>
+     <style>
+          *{
+               margin:0px ;
+               padding: 0px;
+               box-sizing: border-box;
+          }
+          body{
+               width: 100vw;
+               height: 100vh;
+               display: grid;
+               place-items: center;
+          }
+          .main{
+               z-index: -2;
+               background-color: #F3AC3C;
+               width: 600px;
+               height: 500px;
+               /* border: 2px solid red; */
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+          .box{
+               width: 100px;
+               height: 100px;
+               /* border: 2px solid green; */
+               background-color: #F3AC3C;
+               border-radius: 20px;
+               position: relative;
+          }
+          .box::before{
+               top: 35%;
+               left: 30%;
+               content: "";
+               position: absolute;
+               z-index: -1;
+               width: 180px;
+               height: 125px;
+               background-color: #1A4341;
+               /* border: 2px solid blue; */
+               border-radius: 30px;
+
+          }
+          .box::after{
+               top: -65%;
+               left: -130%;
+               content: "";
+               position: absolute;
+               z-index: -1;
+               width: 180px;
+               background-color: #1A4341;
+               height: 125px;
+               /* border: 2px solid blue; */
+               border-radius: 30px;
+          }
+     </style>
+</head>
+<body>
+     <div class="main">
+          <div class="box"></div>
+     </div>
+</body>
+</html>

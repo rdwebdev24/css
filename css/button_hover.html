@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>button hover</title>
+     <style>
+
+*{
+     margin: 0px ;
+     padding: 0px ;
+     box-sizing: border-box;
+}
+
+body{
+     width: 100%;
+     height: 100vh;
+     display: grid;
+     place-items:center;
+     background: #f5f5f5;
+
+}
+
+.box{
+    width: 25%;
+    height: 10vh;
+    position: relative;
+}
+.box::before{
+     content: "";
+     position: absolute;
+     width: 25%;
+     height: 70%;
+     border-top: 2px solid green;
+     border-left: 2px solid green;
+     transition: all 0.3s ease-in-out;
+     top: -15%;
+     left: -3%;
+}
+.box::after{
+     content: "";
+     position: absolute;
+     width: 25%;
+     height: 70%;
+     border-bottom: 2px solid green;
+     border-right: 2px solid green;
+     transition: all 0.3s ease-in-out;
+     right: -3%;
+     bottom:-15%;
+}
+
+
+.box:hover:before,
+.box:hover:after{
+     width: 100%;
+     height: 100%;
+    
+}
+
+
+button{
+     font-size: 1.5rem;
+     font-weight: bold;
+     color: white;
+     font-family: 'Times New Roman', Times, serif;
+     background-color: rgb(10, 141, 10);
+    border-style: none;
+    width: 100%; 
+    height: inherit;
+}
+     </style>
+</head>
+<body>
+     <div class="box">
+          <button> Register here </button>
+     </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>css selection selector </title>
+     <style>
+
+::selection{
+     background-color: yellow;
+     color: red;
+}
+
+body{
+     width: 100%;
+     height: 100vh;
+     display: grid;
+     place-items: center;
+}
+
+div{
+     background-color: skyblue;
+     padding: 30px;
+     width: 50%;
+     border: 2px solid blue;
+     border-radius: 20px;
+     box-shadow: 2px 2px 5px grey;
+     font-family: Arial, Helvetica, sans-serif;   
+}
+
+h3{
+     text-align: center;
+     color: purple;
+     text-shadow: 2px 2px 5px violet;
+}
+h3::selection{
+     background-color: white;
+     color: red;
+}
+
+     </style>
+</head>
+<body>
+     <div> <h3>This is css selection selector</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam hic ipsum voluptatibus ducimus distinctio ea ex suscipit necessitatibus eveniet sint explicabo repellendus fuga accusamus at assumenda quo inventore, fugit modi nemo eius, beatae odio sequi quod! Laudantium libero maxime in.
+     </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>css battle - 1</title>
+     <style>
+
+*{
+     margin: 0px;
+     padding:0px;
+     box-sizing: border-box;
+}
+body{
+     display: grid;
+     place-items: center;
+     width: 100vw;
+     height: 100vh;
+}
+
+.main{
+     border: 2px solid black;
+     width: 270px;
+     height: 250px; 
+    display: flex;
+    background: #191919;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.div1{
+     width: 200px;
+     height: 200px;
+     /* border: 2px solid green; */
+     border-radius: 100%;
+     z-index: 1;
+    position: absolute;
+    transform: rotate(45deg);
+   background-image: radial-gradient(circle closest-side ,transparent , 100%,#fff),
+     conic-gradient(
+          from 180deg,
+          #F9E492 0,
+          #F9E492 75%,
+          #191919 0,
+          #191919 100%
+          /* yellow 0,
+          yellow 75%,
+          green 0,
+          green 90%,
+          purple 0,
+          purple 100% */
+     );
+}
+.div2{
+     top: 56%;
+     width: 270px;
+     height: 110px;
+     /* border: 2px solid red; */
+     clip-path: polygon(49% 0, 0% 100%, 100% 100%);
+     z-index: 0;
+     background-color: #4F77FF;
+    position: absolute;
+
+}
+
+
+     </style>
+</head>
+<body>
+     <div class="main">
+          <div class="div1"></div>
+          <div class="div2"></div>
+     </div>
+</body>
+</html>

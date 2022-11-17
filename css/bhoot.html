@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>bhoot</title>
+     <style>
+
+*{
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+}
+
+body{
+     background-color: blue;
+     display: grid;
+     place-items: center;
+     width: 100vw;
+     height: 100vh;
+     transition: all 5s 1s linear;
+}
+
+body:hover{
+     background-color: black;
+
+}
+
+.main{
+     width: 150px;
+     height: 250px;
+     /* border: 2px solid red; */
+     background-color: #000;
+     border-top-left-radius: 100%;
+     border-top-right-radius: 100%;
+     position: relative;
+    animation: big 4s 2s linear forwards;
+}
+
+@keyframes big {
+     0%{ width: 150px; height: 250px;}
+     20%{ width: 250px; height: 350px;}
+     40%{ width: 350px; height: 450px;}
+     60%{ width: 450px; height: 500px;}
+     80%{ width: 550px; height: 550px;}
+     100%{ width: 650px; height: 600px;}
+}
+
+.main::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "Ander mat jana";
+    color: white;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 5px black;
+    display: grid;
+    place-items: center;
+    background-color: red;
+    border-top-left-radius: 100%;
+     border-top-right-radius: 100%;
+     transform-origin:right;
+     transform:rotateY(0deg);
+     transition: all 4s;
+     animation: big 4s 2s linear forwards;
+}
+
+
+
+.main:hover:before{
+    height: 230px;
+     transform:perspective(700px)  rotateY(-45deg) translateY(20px);
+}
+
+.main::after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url('./download\ \(4\).jpg');
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-top-left-radius: 100%;
+     border-top-right-radius: 100%;
+     transform-origin:right;
+     transform:rotateY(0deg);
+     transition: all 2s linear;
+     animation: bhoot 1s 4.5s forwards;
+}
+
+@keyframes bhoot {
+    0%,100% {background-size: 100% 100%; z-index: 1;}
+}
+
+audio{
+     position: absolute;
+     z-index: -1;
+     opacity: 0;
+}
+     </style>
+</head>
+<body>
+     
+     <div class="main"></div>
+
+     <audio src="./mixkit-scary-wooden-door-opening-190.wav" id="my_audio" controls  ></audio> 
+
+     <script type="text/javascript"> 
+     
+     setTimeout(function(){ 
+     
+     document.getElementById("my_audio").play(); 
+     
+     console.log('your sound is begun a little while ago'); 
+     
+     }, 1000) 
+
+</script>
+     <audio src="./mixkit-gasping-zombie-963.wav" id="audio" controls  ></audio> 
+
+     <script type="text/javascript"> 
+     
+     setTimeout(function(){ 
+     
+     document.getElementById("audio").play(); 
+     
+     console.log('your sound is begun a little while ago'); 
+     
+     }, 4500) 
+
+
+</script>
+</body>
+</html>

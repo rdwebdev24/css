@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          body{
+               width: 100vw;
+               height: 100vh;
+               display: flex;
+               flex-direction: row;
+               justify-content: center;
+               align-items: center;
+               background-color: #F3AC3C;
+          }
+          .main{
+               width: 80px;
+               height: 80px;
+               border-radius: 100%;
+               border: 8px solid #F3AC3C;
+               background-color: #1A4341;
+               position: relative;
+          }
+          .main::before{
+               z-index: -1;
+               top: -46%;
+               left: -46%;
+               position: absolute;
+               content: "";
+               width: 150px;
+               height: 150px;
+               border-radius: 100%;
+               background-color: #998235;
+          }
+          .main::after{
+               z-index: -1;
+               top: -96%;
+               left: -230%;
+               position: absolute;
+               content: "";
+               width: 230px;
+               height: 230px;
+               border-radius: 100%;
+               background-color: #998235;
+          }
+          .handle{
+               position: absolute;
+               width: 200px;
+               height: 25px;
+               z-index: -2;
+               background-color: #1A4341;
+               left: 54%;
+          }
+          .top{
+              transform: translate(212px , 0);
+               width: 50px;
+               height: 40px;
+               border-radius: 12px;
+               background-color: #998235;
+               position: relative;
+          }
+          .top::before{
+               top: 10px;
+               left: 6px;
+               border-radius: 12px;
+               position: absolute;
+               content: "";
+               width: 78%;
+               height: 17%;
+               background-color: #1A4341;
+          }
+          .top::after{
+               top: 22px;
+               left: 6px;
+               border-radius: 12px;
+               position: absolute;
+               content: "";
+               width: 78%;
+               height: 17%;
+               background-color: #1A4341;
+          }
+          .wire{
+               transform: rotate(90deg);
+               position: absolute;
+               width: 83px;
+               height: 10px;
+               left: 35%;
+               border-radius: 50% 0 50% 0;
+               background-color:#1A4341 ;
+          }
+     </style>
+</head>
+<body>
+     <div class="main"></div>
+     <div class="handle"></div>
+     <div class="top"></div>
+     <div class="wire"></div>
+
+</body>
+</html>

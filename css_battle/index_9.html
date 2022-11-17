@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>CSS BATTLE - 9 </title>
+     <style>
+          * {
+               margin: 0px;
+               padding: 0px;
+               box-sizing: border-box;
+          }
+
+          body {
+               perspective: 800px;
+               transform-style: preserve-3d;
+               width: 100vw;
+               height: 100vh;
+               display: grid;
+               place-items: center;
+          }
+
+          .main {
+               /* background-color: #191919; */
+               width: 100%;
+               height: 100%;
+               /* border: 2px solid red; */
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               position: relative;
+               animation: turn 5s infinite linear;
+          }
+          @keyframes turn {
+               0%{transform: rotate(0deg);}
+               100%{transform: rotate(360deg);}
+          }
+
+          .box {
+               margin-top: 200px;
+               margin-right: 200px;
+               width: 200px;
+               height: 200px;
+               position: absolute;
+               /* border: 2px solid green; */
+               clip-path: circle(50% at 50% 0);
+
+          }
+
+          #box-1 {
+               transform:rotateZ(90deg) ;
+               background-color: #4F77FF;
+          }
+
+          #box-2 {
+               transform: rotateZ(180deg) translateY(100%);
+               background-color: #F9E492;
+          }
+
+          #box-3 {
+               transform:rotateZ(-90deg) translate(100% , 100%);
+               background-color: #4F77FF;
+          }
+
+          #box-4 {
+               transform: translateX(100%);
+               background-color: #F9E492;
+
+          }
+     </style>
+</head>
+
+<body>
+     <div class="main">
+          <div class="box" id="box-1"></div>
+          <div class="box" id="box-2"></div>
+          <div class="box" id="box-3"></div>
+          <div class="box" id="box-4"></div>
+     </div>
+</body>
+
+</html>

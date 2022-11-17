@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>css battle 5 </title>
+     <style>
+
+*{
+     margin: 0px ;
+     padding:0px;
+     box-sizing: border-box;
+}
+
+body{
+     display: grid;
+     place-items: center;
+     width: 100vw;
+     height: 100vh;
+     /* background-color: red; */
+}
+
+.main{
+     background-color: #D25B70;
+    width:350px;
+    height: 350px;
+    border: 2px solid red;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.div1{
+     bottom:40px;
+     position: absolute;
+     width: 40%;
+     height: 40%;
+     background-color: #F7F3DA;
+}
+.div2{
+     transform: rotate(31deg);
+     top: 45px;
+     right: 71px;
+     position: absolute;
+     width: 30%;
+     height: 30%;
+    background-color: #F6DF96;
+}
+.div3{
+     transform: rotate(-50deg);
+     position: absolute;
+     top: 84px;
+     left: 68px;
+     width: 20%;
+     height: 20%;
+     background-color: #6CB3A9;
+}
+
+
+@media (max-width:475px) {
+     .main{
+    width:280px;
+    height: 280px;
+}
+
+.div2{
+     top: 27px;
+     right: 57px;
+}
+.div3{
+     top: 59px;
+     left: 52px;
+}
+}
+     </style>
+</head>
+<body>
+     <div class="main">
+          <div class="div1"></div>
+          <div class="div2"></div>
+          <div class="div3"></div>
+     </div>
+</body>
+</html>

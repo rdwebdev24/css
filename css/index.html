@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          * {
+               margin: 0px;
+               padding: 0px;
+               box-sizing: border-box;
+          }
+
+          body {
+               display: grid;
+               place-items: center;
+               width: 100%;
+               height: 100vh;
+               background-color: skyblue;
+               font-family: 'Ubuntu', sans-serif;
+          }
+
+
+          h1 {
+               background-color: blue;
+               padding: 25px;
+               color: white;
+               font-size: 1.5rem;
+               position: relative;
+               /* animation: slide 1.5s;
+               animation-delay: 4s;
+               animation-fill-mode: forwards; */
+          }
+
+          @keyframes slide {
+               from {
+                    transform: translateX(0px);
+               }
+
+               to {
+                    transform: translateX(1000px);
+               }
+
+          }
+
+          h1::before {
+               content: "wait";
+               text-align: center;
+               width: 80%;
+               height: 24%;
+               position: absolute;
+               top: 0%;
+               left: 0%;
+               background-color: purple;
+               padding: 30px;
+               color: white;
+               font-size: 1.5rem;
+               transform: rotatex(0deg);
+               border-bottom-left-radius: 50%;
+               border-bottom-right-radius: 50%;
+               transition: all 0.3s;
+               transform-origin: top;
+               transition-delay: 1s;
+
+
+          }
+
+          h1:hover::before {
+               transform: rotateX(270deg);
+
+          }
+
+          h1::after {
+               content: "Tap to open";
+               text-align: center;
+               width: 80%;
+               height: 24%;
+               position: absolute;
+               top: 0%;
+               left: 0%;
+               background-color: green;
+               padding: 30px;
+               color: white;
+               font-size: 1.5rem;
+               transform: rotatex(0deg);
+               border-top-left-radius: 50%;
+               border-top-right-radius: 50%;
+               transition: all 0.3s;
+               transform-origin: bottom;
+          }
+
+          h1:hover::after {
+               transform: rotateX(270deg);
+
+          }
+
+
+          @media (min-width:320px) and (max-width:425px) {
+
+               h1 {
+                    background-color: white;
+                    padding: 15px;
+                    color: red;
+                    font-size: 1rem;
+               }
+
+               h1::before {
+               width: 76%;
+               height: 0%;
+               padding: 24px;
+               font-size: 1rem;
+
+          }
+
+          h1::after {
+               width: 76%;
+               height: 0%;
+               padding: 24px;
+               font-size: 1rem;
+          }
+
+          }
+     </style>
+</head>
+
+<body>
+     <h1>Ache din aaye ya nahi</h1>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>cursor</title>
+     <style>
+          body{
+               margin: 0;
+               font-family: sans-serif;
+               background: #fff;
+               color: #1c1e26;
+               display: grid;
+               place-items: center;
+               overflow: hidden;
+               height: 100vh;
+          }
+          h1{
+               font-size: 4rem;
+          }
+          .cursor{
+               width: 7rem;
+               height: 7rem;
+               background: #fff;
+               border-radius: 50%;
+               position: absolute;
+               mix-blend-mode: difference;
+               transition: all  ease-in-out;
+          }
+     </style>
+</head>
+<body>
+     <h1>Les's build for here togrther</h1>
+     <div class="cursor"></div>
+     <script>
+          let cursor = document.querySelector('.cursor');
+          document.addEventListener("mousemove",(e)=>{
+               cursor.style.cssText = `
+               top:${e.y-80}px;
+               left:${e.x-80}px;
+               `
+               console.log("fdsfsd");
+          })
+     </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>pi_chart</title>
+     <style>
+
+*{
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+}
+
+body{
+     width: 100vw;
+     height: 100vh;
+     display: grid;
+     place-items: center;
+}
+
+
+.main{
+     width: calc(100vw - 40vw);
+     height: calc(100vh - 40vh);
+     border: grey;
+     border-radius: 20px;
+     box-shadow: 2px 2px 5px grey;
+     display: grid;
+     place-items: center;
+}
+
+
+.pi_chart{
+     background-image: radial-gradient(circle closest-side ,transparent , 100%,#fff),
+     conic-gradient(
+          from 180deg,
+          red 0,
+          red 35%,
+          blue 0,
+          blue 40%,
+          yellow 0,
+          yellow 75%,
+          green 0,
+          green 90%,
+          purple 0,
+          purple 100%
+     );
+     height: calc(60vw - 32vw);
+     width: calc(60vh - 20vh);
+
+}
+
+
+
+
+
+
+     </style>
+</head>
+<body>
+     <div class="main">
+          <div class="pi_chart">
+          </div>
+     </div>
+</body>
+</html>
